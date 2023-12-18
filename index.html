@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pratham's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:wght@200&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="sticky">
+        <div class="left">Pratham's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/">Conact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="firstsection">
+        <div class="leftsection">
+          Hello,My name is <span class="rang">Pratham</span>
+          <div>
+            and I am an aspiring
+          </div>
+          <span id="element"></span>
+          <div>
+            <a href="/assets/Resume.pdf" target="_blank">
+            <button class="btn">Download Resume</button>
+          </a>
+          </div>
+        </div>
+
+        <div class="rightsection">
+          <img src="./assets/my-image.jpg" alt="my image" />
+        </div>
+      </section>
+      <hr />
+      <section class="secondsection">
+        <span id="grey">What I have done so far</span>
+        <h1>Skills</h1>
+        <div class="bar">
+          <div class="I-bar">
+            <div class="U-text">HTML</div>
+            <div class="L-text">
+              Html Structure,Tags,
+              <div>Attributer,Elements,</div>
+              <div>Tables,Forms,Sementic Tags.</div>
+            </div>
+          </div>
+          <div class="I-bar">
+            <div class="U-text">CSS</div>
+            <div class="L-text">
+              CSS Types,Selectors,
+              <div>Box-Model,Color Property,Flex</div>
+              <div>Grid,Media Query,Animations</div>
+            </div>
+          </div>
+          <div class="I-bar">
+            <div class="U-text">JAVASCRIPT</div>
+            <div class="L-text">
+              Variables,Operators,
+              <div>Conditional Statements,Loops,</div>
+              <div>Functions,DOM.</div>
+            </div>
+          </div>
+          <div class="I-bar">
+            <div class="U-text">PYTHON</div>
+            <div class="L-text">
+              Basics,Operators,
+              <div>Loops,Functions,Oops,</div>
+              <div>DataTypes.</div>
+            </div>
+          </div>
+          <div class="I-bar">
+            <div class="U-text">DATABASE</div>
+            <div class="L-text">
+              Database,Sql,
+              <div>MongoDB,RDBMS,</div>
+              <div>Store Procedure,MySql.</div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+      <hr />
+      <section class="secondsection container">
+        <h1>Projects</h1>
+        <div class="bind">
+        <div class="card">
+          <div class="image">
+            <img width="285" height="200" src="./assets/cardimg.jpg" alt="image" />
+          </div>
+          <div class="content">
+            <button>Explore More</button>
+            <h2>Project Name</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus illo id
+              suscipit, eaque veritatis fugit fugiat nobis distinctio error dolores
+              provident reprehenderit.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img width="285" height="200" src="./assets/cardimg.jpg" alt="image" />
+          </div>
+          <div class="content">
+            <button>Explore More</button>
+            <h2>Project Name</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus illo id
+              suscipit, eaque veritatis fugit fugiat nobis distinctio error dolores
+              provident reprehenderit.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img width="285" height="200" src="./assets/cardimg.jpg" alt="image" />
+          </div>
+          <div class="content">
+            <button>Explore More</button>
+            <h2>Project Name</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus illo id
+              suscipit, eaque veritatis fugit fugiat nobis distinctio error dolores
+              provident reprehenderit.
+            </p>
+          </div>
+        </div>
+      </div>
+        
+      </section>
+      
+    </main>
+
+    <footer class="footer">
+      <div class="f-h">
+        Pratham's Portfolio
+      </div>
+      <div class="f-items">
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/pratham-abrol1/" target="_blank">LINKEDIN</a>
+          </li>
+          <li><a href="https://github.com/prathamabrol" target="_blank">GITHUB</a></li>
+          <li>
+            <a href="https://wingz.itvedant.com/index.php/site/index" target="_blank"
+              >IT VEDANT</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="f2-items">
+          <li><a href="tel:+919906281719" target="_blank">+91 9906281719</a></li>
+          <li><a href="prathamabrol0@gmail.com" target="_blank">Click here to Mail Me.</a></li>
+        </ul>
+      </div>
+    </footer>
+    <div class="last">
+      Copyright &#169; prathamsportfilio.com | All rights reserved
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web Developer", "Programmer", "Web Designer"],
+        typeSpeed: 50,
+      });
+    </script>
+  </body>
+</html>
