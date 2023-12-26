@@ -49,12 +49,14 @@ main hr {
 }
 .firstsection {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   align-items: center;
   margin: 90px 0;
 }
 .firstsection > div {
-  width: 40%;
+  width: 100%; /* Take full width on small screens, adjust as needed */
+  margin-bottom: 20px; /* Add margin between the two divs */
 }
 
 .leftsection {
@@ -75,7 +77,7 @@ main hr {
 }
 
 .rightsection img {
-  width: 70%;
+  width: 60%; /* Make the image responsive within its container */
   border-radius: 48%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -93,12 +95,12 @@ main hr {
 .secondsection {
   max-width: 80vw;
   margin: auto;
-  height: 100vh;
+  height: 600px;
   padding-top: 50px;
 }
 .secondsection h1 {
   font-size: xx-large;
-  padding-bottom: 35px 0;;
+  padding-bottom: 100px ;;
 }
 .secondsection .bar {
   background: white;
@@ -127,12 +129,20 @@ main hr {
   font-size: 0.66rem;
   color: #ced4da;
 }
+
+.thirdsection {
+  max-width: 80vw;
+  margin: auto;
+  height: 750px;
+  padding-top: 50px;
+}
 .footer {
   background-color: rgb(42, 42, 91);
-  height: 180px;
+  height: 160px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
 }
 .f2-items,
 .f-items ul li {
@@ -159,65 +169,132 @@ main hr {
   font-size: 25px;
 }
 .last {
-  padding-left: 35vw;
+  padding-left: 0;
   background: rgb(42, 42, 91);
+  width: 100%;
+  text-align: center;
 }
-container{
-  background-color: rgb(140, 138, 138);
-  padding: 45px;
-  display: flex;
-}
-.card{
-  background-color: rgb(255, 255, 255);
-  width: 300px;
-  border-radius: 10px;
-  padding: 0 0 20px 0;
-  margin: 65px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-  rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-  rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-.content{
-  padding: 2px 17px 10px 7px;
-  color: rgba(3, 3, 65, 0.901);
 
-}
-.content button{
-  padding: 2px 10px;
-  margin-left: 80px;
-  margin-bottom: 10px;
-  border-radius: 6px;
-  border-style: none;
-  cursor: pointer;
-  background: rgba(2, 2, 68, 0.91);
-  border: 1.5px solid rgb(2, 2, 68);
-  color: white;
-}
-.content h2{
-  padding: 15px 0px 5px;
-  font-weight:1000;
-}
-.content button:hover{
-  background-color: white;
-  color: rgb(2, 2, 68);
-  cursor: pointer;
-}
-.content p{
-  font-weight: 500;
-  padding-top: 15px;
-}
-.new{
-  width: 370px;
-}
-.card .center{
-  margin-left: 125px;
-}
-.bind{
+
+.bigcont{
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px; 
+  margin: 0 auto;
 }
-.image img{
+.card-container {
+  margin: 15px;
+}
+
+.card {
+  position: relative;
+  width: 285px;
+  height: 280px;
+  margin: 15px; 
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card .side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+}
+
+.card .front {
+  transform: rotateY(0deg);
+  background-color: #ecf0f1; /* Add a background color for the front side */
   border-radius: 15px;
-  padding: 7px;
+  overflow: hidden;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+  background-color: #030a35d7;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card .image img {
+  width: 96.5%;
+  height: auto; 
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.card .content {
+  text-align: center;
+  color: #333;
+}
+
+.card .back p {
+  margin-bottom: 15px;
+  color: #fff; /* Text color for back side */
+}
+
+.card .back a {
+  padding: 10px;
+  background-color: #284492ec;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.card .back a:hover {
+  color: #07114fd5;
+  background-color: #fff;
+}
+
+
+.card .content h2 {
+  margin: 10px 0;
+  color: #06146e;
+}
+
+.card .content h3 {
+  margin: 5px 0;
+  color: #10166baf; 
+}
+
+
+@media only screen and (min-width: 600px) {
+  .firstsection > div {
+    width: 48%; /* Two columns on screens wider than 600px */
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .firstsection > div {
+    width: 48%; /* Two columns on screens wider than 768px */
+  }
+  
+}
+
+@media only screen and (max-width: 767px) {
+  .bigcont {
+    flex-direction: column; /* Change to a column layout for small screens */
+    align-items: center; /* Center the cards horizontally */
+  }
+
+  .card-container {
+    width: 100%; /* Cards take full width on small screens */
+    margin-bottom: 15px; /* Add margin between the cards */
+  }
 }
